@@ -105,3 +105,6 @@ dist
 
 # DS store files
 *.DS_STORE*
+
+# WebStorm files
+*.idea*
