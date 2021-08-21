@@ -1,5 +1,5 @@
 module.exports = {
-    getNotes: () => {
-        return "Your notes...";
-    },
+  getNotes: () => {
+    return "Your notes...";
+  },
 };
