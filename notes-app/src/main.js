@@ -1,7 +1,5 @@
 "use strict";
 
-//const chalk = require('chalk')
-//const notes = require('./src/notes')
 const yargs = require("yargs");
 
 yargs
