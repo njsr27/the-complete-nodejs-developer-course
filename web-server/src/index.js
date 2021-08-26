@@ -11,6 +11,10 @@ app.use(express.static(__dirname + "/public/"));
 //   res.sendFile(__dirname + "/public/help.html");
 // });
 
+app.get("*", (req, res) => {
+  res.sendFile(__dirname + "/public/notFound.html");
+});
+
 app.listen(3000, () => {
   console.log("Server up and running on port 3000.");
 });
