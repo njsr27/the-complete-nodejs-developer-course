@@ -1,0 +1,5 @@
+module.exports = {
+  WEATHER_APP_ACCESS_KEY: "944ac60d2d29b43ac1126873b849ef75",
+  GEOLOCATION_ACCESS_TOKEN:
+    "pk.eyJ1IjoibGVpbnN3YWlzYnJpY2siLCJhIjoiY2tzbzc5b2V3M3AyZTJ0bjVzeDUzZzRxOSJ9.e6C4XmSL3OdVgr_1hcvvmg",
+};
