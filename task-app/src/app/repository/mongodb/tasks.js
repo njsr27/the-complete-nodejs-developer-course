@@ -1,14 +1,14 @@
-const {mongoClient} = require("mongodb")
-const connectionURL = "mongodb://127.0.0.1:27017"
-const databaseName = "task-app"
+const mongodb = require("mongodb");
+const mongoClient = mongodb.MongoClient;
+const mongoDbConstants = require("../../constants/mongodb");
 
 // Insert functionality
 
-mongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
+mongoClient.connect(mongoDbConstants.CONNECTION_URL, {useNewUrlParser: true}, (error, client) => {
   if (error) {
     console.log(error);
   } else {
-    const db = client.db(databaseName);
+    const db = client.db(mongoDbConstants.DATABASE_NAME);
     db.collection("tasks")
       .insertMany([
         {
@@ -30,5 +30,25 @@ mongoClient.connect(connectionURL, {useNewUrlParser: true}, (error, client) => {
           console.log(result);
         }
       })
+  }
+})
+
+// Read functionality
+
+mongoClient.connect(mongoDbConstants.CONNECTION_URL, {useNewUrlParser: true}, (error, client) => {
+  if (error) {
+    console.log(error);
+  } else {
+    const db = client.db(mongoDbConstants.DATABASE_NAME);
+    db.collection("tasks")
+      .find({completed: false})
+      .toArray((error, response) => {
+          if (error) {
+            console.log(error);
+          } else {
+            console.log(response);
+          }
+        }
+      )
   }
 })
