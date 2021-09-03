@@ -52,3 +52,19 @@ mongoClient.connect(mongoDbConstants.CONNECTION_URL, {useNewUrlParser: true}, (e
       )
   }
 })
+
+// Update functionality
+
+mongoClient.connect(mongoDbConstants.CONNECTION_URL, {useNewUrlParser: true}, (error, client) => {
+  if (error) {
+    console.log(error);
+  } else {
+    const db = client.db(mongoDbConstants.DATABASE_NAME);
+    db.collection("tasks")
+      .updateOne(
+        {description: "Test task 1"},
+        {$set: {description: "Study NodeJS"}}
+      ).then(result => console.log(result))
+      .catch(error => console.log(error))
+  }
+})

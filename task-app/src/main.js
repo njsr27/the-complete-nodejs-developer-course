@@ -22,14 +22,11 @@ mongoClient.connect(mongoDbConstants.CONNECTION_URL, {useNewUrlParser: true}, (e
   } else {
     const db = client.db(mongoDbConstants.DATABASE_NAME);
     db.collection("tasks")
-      .find({completed: false})
-      .toArray((error, response) => {
-          if (error) {
-            console.log(error);
-          } else {
-            console.log(response);
-          }
-        }
+      .updateOne(
+        {description: "Test task 1"},
+        {$set: {description: "Study NodeJS"}}
       )
+      .then(result => console.log(result))
+      .catch(error => console.log(error))
   }
 })
