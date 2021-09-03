@@ -16,16 +16,20 @@ const mongodb = require("mongodb");
 const mongoClient = mongodb.MongoClient;
 const mongoDbConstants = require("./app/constants/mongodb");
 
-mongoClient.connect(mongoDbConstants.CONNECTION_URL, {useNewUrlParser: true}, (error, client) => {
-  if (error) {
-    console.log(error);
-  } else {
-    const db = client.db(mongoDbConstants.DATABASE_NAME);
-    db.collection("tasks")
-      .deleteOne(
-        {description: "Test task 3"}
-      )
-      .then(result => console.log(result))
-      .catch(error => console.log(error))
+mongoClient.connect(
+  mongoDbConstants.CONNECTION_URL,
+  {useNewUrlParser: true},
+  (error, client) => {
+    if (error) {
+      console.log(error);
+    } else {
+      const db = client.db(mongoDbConstants.DATABASE_NAME);
+      db.collection("tasks")
+        .deleteOne(
+          {description: "Test task 3"}
+        )
+        .then(result => console.log(result))
+        .catch(error => console.log(error))
+    }
   }
-})
+)
