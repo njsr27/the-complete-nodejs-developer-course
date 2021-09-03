@@ -68,3 +68,19 @@ mongoClient.connect(mongoDbConstants.CONNECTION_URL, {useNewUrlParser: true}, (e
       .catch(error => console.log(error))
   }
 })
+
+// Delete functionality
+
+mongoClient.connect(mongoDbConstants.CONNECTION_URL, {useNewUrlParser: true}, (error, client) => {
+  if (error) {
+    console.log(error);
+  } else {
+    const db = client.db(mongoDbConstants.DATABASE_NAME);
+    db.collection("tasks")
+      .deleteOne(
+        {description: "Test task 3"}
+      )
+      .then(result => console.log(result))
+      .catch(error => console.log(error))
+  }
+})

@@ -22,9 +22,8 @@ mongoClient.connect(mongoDbConstants.CONNECTION_URL, {useNewUrlParser: true}, (e
   } else {
     const db = client.db(mongoDbConstants.DATABASE_NAME);
     db.collection("tasks")
-      .updateOne(
-        {description: "Test task 1"},
-        {$set: {description: "Study NodeJS"}}
+      .deleteOne(
+        {description: "Test task 3"}
       )
       .then(result => console.log(result))
       .catch(error => console.log(error))
