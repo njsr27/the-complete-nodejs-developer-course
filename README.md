@@ -1,4 +1,4 @@
-# 2021 Complete Python Bootcamp From Zero to Hero in Python
+# The Complete Node.js Developer Course (3rd Edition)
 
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
@@ -15,11 +15,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Projects created during the Udemy course "2021 Complete Python Bootcamp From Zero to Hero in Python"
+Projects created during the Udemy course "The Complete Node.js Developer Course (3rd Edition)"
 
 ## Course
 
-The course can be found [here](https://www.udemy.com/course/complete-python-bootcamp/). <br>
+The course can be found [here](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/). <br>
 
 <!-- LICENSE -->
 ## License
@@ -33,7 +33,7 @@ Nicolas Javier Saavedra Rojas. <br>
 https://www.linkedin.com/in/nicolassaavedrarojas/ <br>
 njsr27@gmail.com
 
-Project Link: [2021 Complete Python Bootcamp From Zero to Hero in Python](https://www.udemy.com/course/complete-python-bootcamp/)
+Project Link: [The Complete Node.js Developer Course (3rd Edition)](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
